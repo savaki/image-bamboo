@@ -17,8 +17,19 @@ sudo tar -C /usr/local -xzf /tmp/golang.tar.gz
 cat <<EOF | sudo tee -a /etc/profile
 
 # update PATH
+export PATH="\${PATH}:/usr/local/go/bin"
 export PATH="\${PATH}:\${GOPATH}/bin"
+
 EOF
+
+# install apex
+#
+curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sh
+
+# install packer
+#
+wget -q -O /tmp/packer.zip https://releases.hashicorp.com/packer/0.9.0/packer_0.9.0_linux_amd64.zip
+sudo unzip -d /usr/local/bin -U /tmp/packer.zip
 
 # install awscli
 #
