@@ -24,10 +24,12 @@ EOF
 
 # install apex
 #
-curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sh
+echo "installing apex"
+curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sudo sh
 
 # install packer
 #
+echo "installing packer"
 wget -q -O /tmp/packer.zip https://releases.hashicorp.com/packer/0.9.0/packer_0.9.0_linux_amd64.zip
 sudo unzip -d /usr/local/bin -U /tmp/packer.zip
 
