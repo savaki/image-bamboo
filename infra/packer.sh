@@ -3,7 +3,7 @@
 # install basic packages
 #
 sudo yum update -y
-sudo yum install -y git bzr mercurial wget telnet curl rake python unzip phantomjs
+sudo yum install -y git bzr mercurial wget telnet curl rake python unzip 
 
 # install docker
 #
@@ -32,6 +32,15 @@ curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sudo sh
 echo "installing packer"
 wget -q -O /tmp/packer.zip https://releases.hashicorp.com/packer/0.9.0/packer_0.9.0_linux_amd64.zip
 sudo unzip -d /usr/local/bin -U /tmp/packer.zip
+rm -rf /tmp/packer.zip
+
+# install phantomjs
+#
+echo "installing phantomjs"
+curl -L -o /tmp/phantomjs.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+tar -C /tmp -xvf /tmp/phantomjs.tar.bz2
+cp /tmp/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
+rm -rf /tmp/phantom*
 
 # install awscli
 #
