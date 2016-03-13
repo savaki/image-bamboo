@@ -3,7 +3,7 @@
 # install basic packages
 #
 sudo yum update -y
-sudo yum install -y git bzr mercurial wget telnet curl rake python unzip
+sudo yum install -y git bzr mercurial wget telnet curl rake python unzip phantomjs
 
 # install docker
 #
