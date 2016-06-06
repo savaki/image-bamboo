@@ -12,7 +12,7 @@ sudo usermod -a -G docker ec2-user
 
 # install golang
 #
-sudo wget -q -O /tmp/golang.tar.gz https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
+sudo wget -q -O /tmp/golang.tar.gz https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf /tmp/golang.tar.gz
 cat <<EOF | sudo tee -a /etc/profile
 
