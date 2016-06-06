@@ -39,8 +39,8 @@ rm -rf /tmp/packer.zip
 echo "installing phantomjs"
 curl -L -o /tmp/phantomjs.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
 tar -C /tmp -xvf /tmp/phantomjs.tar.bz2
-cp /tmp/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
-rm -rf /tmp/phantom*
+sudo cp /tmp/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
+sudo rm -rf /tmp/phantom*
 
 # install awscli
 #
